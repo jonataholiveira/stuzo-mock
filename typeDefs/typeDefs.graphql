@@ -1,0 +1,134 @@
+type OAuthApplicationAuthenticate {
+  token: String
+  scope: String
+  createdAt: Int
+  expires: Int
+}
+
+type CarWashDetails {
+  description: String
+  posCode: String
+  posCodeModifier: String
+  posCodeFormat: String
+  productCode: String
+  merchandiseCode: String
+  unitPrice: Int
+}
+
+type FuelConfigDetails {
+  outdoorPosition: String
+  description: String
+  posCode: String
+  posCodeModifier: String
+  posCodeFormat: String
+  productCode: String
+  merchandiseCode: String
+  priceTier: String
+  unitPrice: Float
+}
+
+type Details {
+  siteAddress: String
+  siteName: String
+  latitude: Float
+  longitude: Float
+  welcomeMsg: String
+  mobileVersion: String
+  mobileActive: Boolean
+  pumpTimeout: Int
+  lastMobileConnection: String
+  lastLoyaltyConnection: String
+  isOnline: Boolean
+  carWashDetails: [CarWashDetails]
+  fuelConfigDetails: [FuelConfigDetails]
+}
+
+type SiteSystemConfiguration {
+  details: Details
+}
+
+type Brand {
+  uuid: String
+}
+
+type Edges {
+  cursor: String
+  node: Node
+}
+
+type PageInfo {
+  startCursor: String
+  endCursor: String
+}
+
+type Locations {
+  edges: [Edges]
+  pageInfo: PageInfo
+}
+
+type TransactionExternalPaymentStart {
+  uuid: String
+  umti: String
+  fuelingPosition: String
+  primaryStatus: String
+  secondaryStatus: String
+  preAuthAmount: PreAuthAmount
+}
+type TransactionExternalPaymentCancel {
+  uuid: String
+  primaryStatus: String
+  secondaryStatus: String
+}
+
+type TransactionExternalPaymentFinalize {
+  uuid: String
+  primaryStatus: String
+  secondaryStatus: String
+}
+
+type FuelReceipt {
+  gallons: String
+  priceG: String
+  fuelSale: String
+  product: String
+}
+
+type PreAuthAmount {
+  displayPrice: String
+  price: Int
+}
+
+type Amount {
+  displayPrice: String
+  price: Float
+}
+
+type ReceiptLines {
+  value: String
+  lineNumber: Int
+}
+
+type Node {
+  uuid: String
+  primaryStatus: String
+  secondaryStatus: String
+  fuelReceipt: FuelReceipt
+  preAuthAmount: PreAuthAmount
+  amount: Amount
+  siteSystemConfiguration: [SiteSystemConfiguration]
+  brand: Brand
+  receiptLines: [ReceiptLines]
+}
+
+type Transactions {
+  edges: [Edges]
+}
+
+type Query {
+  oAuthApplicationAuthenticate: OAuthApplicationAuthenticate
+  locations: Locations
+  transactionExternalPaymentStart: TransactionExternalPaymentStart
+  transactionExternalPaymentCancel: TransactionExternalPaymentCancel
+  transactionExternalPaymentFinalize: TransactionExternalPaymentFinalize
+  transactions: Transactions
+}

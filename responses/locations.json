@@ -1,0 +1,148 @@
+{
+    "data": {
+        "locations": {
+            "pageInfo": {
+                "startCursor": "NzI4M2MyYWYtNTU3My00NmVhLTkxMGEtNTlmOGNkMzUwYWU1",
+                "endCursor": "NzI4M2MyYWYtNTU3My00NmVhLTkxMGEtNTlmOGNkMzUwYWU1"
+            },
+            "edges": [
+                {
+                    "cursor": "NzI4M2MyYWYtNTU3My00NmVhLTkxMGEtNTlmOGNkMzUwYWU1",
+                    "node": {
+                        "uuid": "7283c2af-5573-46ea-910a-59f8cd350ae5",
+                        "brand": {
+                            "uuid": "0fc35504-a70a-1482-098e-deb5f61bac17"
+                        },
+                        "siteSystemConfiguration": [
+                            {
+                                "details": {
+                                    "siteAddress": "211 N 13th St, Philadelphia, PA 19108",
+                                    "siteName": "Stuzo Lab",
+                                    "latitude": -75.1625727,
+                                    "longitude": 39.9566165,
+                                    "welcomeMsg": "Welcome to Stuzo Lab",
+                                    "mobileVersion": null,
+                                    "mobileActive": false,
+                                    "pumpTimeout": 180,
+                                    "fuelConfigDetails": [
+                                        {
+                                            "outdoorPosition": "1",
+                                            "description": "DIESEL",
+                                            "posCode": "00000000000000",
+                                            "posCodeModifier": "0",
+                                            "posCodeFormat": null,
+                                            "productCode": "1",
+                                            "merchandiseCode": "1",
+                                            "priceTier": "cash",
+                                            "unitPrice": 1.111
+                                        },
+                                        {
+                                            "outdoorPosition": "1",
+                                            "description": "DIESEL",
+                                            "posCode": "00000000000000",
+                                            "posCodeModifier": "0",
+                                            "posCodeFormat": null,
+                                            "productCode": "1",
+                                            "merchandiseCode": "1",
+                                            "priceTier": "credit",
+                                            "unitPrice": 1.111
+                                        },
+                                        {
+                                            "outdoorPosition": "1",
+                                            "description": "SUPER",
+                                            "posCode": "00000000000000",
+                                            "posCodeModifier": "0",
+                                            "posCodeFormat": null,
+                                            "productCode": "5",
+                                            "merchandiseCode": "5",
+                                            "priceTier": "cash",
+                                            "unitPrice": 4.444
+                                        },
+                                        {
+                                            "outdoorPosition": "1",
+                                            "description": "SUPER",
+                                            "posCode": "00000000000000",
+                                            "posCodeModifier": "0",
+                                            "posCodeFormat": null,
+                                            "productCode": "5",
+                                            "merchandiseCode": "5",
+                                            "priceTier": "credit",
+                                            "unitPrice": 4.444
+                                        },
+                                        {
+                                            "outdoorPosition": "1",
+                                            "description": "PLUS",
+                                            "posCode": "00000000000000",
+                                            "posCodeModifier": "0",
+                                            "posCodeFormat": null,
+                                            "productCode": "6",
+                                            "merchandiseCode": "6",
+                                            "priceTier": "cash",
+                                            "unitPrice": 3.333
+                                        },
+                                        {
+                                            "outdoorPosition": "1",
+                                            "description": "PLUS",
+                                            "posCode": "00000000000000",
+                                            "posCodeModifier": "0",
+                                            "posCodeFormat": null,
+                                            "productCode": "6",
+                                            "merchandiseCode": "6",
+                                            "priceTier": "credit",
+                                            "unitPrice": 3.333
+                                        },
+                                        {
+                                            "outdoorPosition": "1",
+                                            "description": "REG",
+                                            "posCode": "00000000000000",
+                                            "posCodeModifier": "0",
+                                            "posCodeFormat": null,
+                                            "productCode": "4",
+                                            "merchandiseCode": "4",
+                                            "priceTier": "cash",
+                                            "unitPrice": 2.222
+                                        },
+                                        {
+                                            "outdoorPosition": "1",
+                                            "description": "REG",
+                                            "posCode": "00000000000000",
+                                            "posCodeModifier": "0",
+                                            "posCodeFormat": null,
+                                            "productCode": "4",
+                                            "merchandiseCode": "4",
+                                            "priceTier": "credit",
+                                            "unitPrice": 2.222
+                                        }
+                                    ],
+                                    "carWashDetails": [
+                                        {
+                                            "description": "SUPER WASH",
+                                            "posCode": "00000000024020",
+                                            "posCodeModifier": "000",
+                                            "posCodeFormat": "plu",
+                                            "productCode": "102",
+                                            "merchandiseCode": "102",
+                                            "unitPrice": 4001
+                                        },
+                                        {
+                                            "description": "ULTIMATE",
+                                            "posCode": "00000000024037",
+                                            "posCodeModifier": "000",
+                                            "posCodeFormat": "plu",
+                                            "productCode": "102",
+                                            "merchandiseCode": "102",
+                                            "unitPrice": 16
+                                        }
+                                    ],
+                                    "lastMobileConnection": "2021-05-13T18:45:56.693Z",
+                                    "lastLoyaltyConnection": "2021-05-14T19:09:38.884Z",
+                                    "isOnline": false
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

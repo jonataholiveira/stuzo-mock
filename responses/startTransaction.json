@@ -1,0 +1,15 @@
+{
+    "data": {
+        "transactionExternalPaymentStart": {
+            "uuid": "c7c7753d-cd13-473a-89f8-8efb173b0308",
+            "umti": "a7393338-d7cd-42a2-b9e8-2a901a7d952d",
+            "fuelingPosition": "1",
+            "primaryStatus": "ACTIVE",
+            "secondaryStatus": "RESERVING_PUMP",
+            "preAuthAmount": {
+                "displayPrice": "$20.00",
+                "price": 20.00
+            }
+        }
+    }
+}

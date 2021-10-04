@@ -1,0 +1,131 @@
+{
+    "data": {
+        "transactions": {
+            "edges": [
+                {
+                    "node": {
+                        "uuid": "774c40ea-1ef4-4716-89b8-2d7cb6685011",
+                        "primaryStatus": "COMPLETED",
+                        "secondaryStatus": "CLOSED",
+                        "receiptLines": [
+                            {
+                                "value": " Welcome ",
+                                "lineNumber": 0
+                            },
+                            {
+                                "value": " Stuzo ",
+                                "lineNumber": 1
+                            },
+                            {
+                                "value": " 211 N 13th St ",
+                                "lineNumber": 2
+                            },
+                            {
+                                "value": " Philadelphia PA ",
+                                "lineNumber": 3
+                            },
+                            {
+                                "value": " 19107 ",
+                                "lineNumber": 4
+                            },
+                            {
+                                "value": "",
+                                "lineNumber": 5
+                            },
+                            {
+                                "value": "DATE 5/5/21 12:35",
+                                "lineNumber": 6
+                            },
+                            {
+                                "value": "TRAN# 9011244",
+                                "lineNumber": 7
+                            },
+                            {
+                                "value": "PUMP# 01",
+                                "lineNumber": 8
+                            },
+                            {
+                                "value": "SERVICE LEVEL: SELF ",
+                                "lineNumber": 9
+                            },
+                            {
+                                "value": "PRODUCT: REG ",
+                                "lineNumber": 10
+                            },
+                            {
+                                "value": "GALLONS: 0.771",
+                                "lineNumber": 11
+                            },
+                            {
+                                "value": "PRICE/G: $ 2.222",
+                                "lineNumber": 12
+                            },
+                            {
+                                "value": "FUEL SALE $1.71",
+                                "lineNumber": 13
+                            },
+                            {
+                                "value": " Mobile $1.71",
+                                "lineNumber": 14
+                            },
+                            {
+                                "value": "",
+                                "lineNumber": 15
+                            },
+                            {
+                                "value": "MOBILE",
+                                "lineNumber": 16
+                            },
+                            {
+                                "value": "APPLE_PAY",
+                                "lineNumber": 17
+                            },
+                            {
+                                "value": "CREDIT",
+                                "lineNumber": 18
+                            },
+                            {
+                                "value": "1881",
+                                "lineNumber": 19
+                            },
+                            {
+                                "value": "AUTH #: VG067C",
+                                "lineNumber": 20
+                            },
+                            {
+                                "value": " ",
+                                "lineNumber": 21
+                            },
+                            {
+                                "value": "",
+                                "lineNumber": 22
+                            },
+                            {
+                                "value": " Come again ",
+                                "lineNumber": 23
+                            },
+                            {
+                                "value": " HAVE A NICE DAY ",
+                                "lineNumber": 24
+                            }
+                        ],
+                        "amount": {
+                            "displayPrice": "1.71",
+                            "price": 1.71
+                        },
+                        "preAuthAmount": {
+                            "displayPrice": "$50.00",
+                            "price": 50
+                        },
+                        "fuelReceipt": {
+                            "gallons": "0.771",
+                            "priceG": "2.222",
+                            "fuelSale": "1.71",
+                            "product": "REG"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

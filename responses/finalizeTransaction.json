@@ -1,0 +1,9 @@
+{
+    "data": {
+        "transactionExternalPaymentFinalize": {
+            "uuid": "c7c7753d-cd13-473a-89f8-8efb173b0308",
+            "primaryStatus": "ACTIVE",
+            "secondaryStatus": "GETTING_RECEIPT"
+        }
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "data": {
+        "oAuthApplicationAuthenticate": {
+            "token": "d503b8fc9ad874a5ec17722028afa03da25761ad",
+            "scope": "admin",
+            "createdAt": 1624906202,
+            "expires": 1624913408
+        }
+    }
+}
