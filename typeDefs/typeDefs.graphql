@@ -127,8 +127,11 @@ type Transactions {
 type Query {
   oAuthApplicationAuthenticate: OAuthApplicationAuthenticate
   locations: Locations
-  transactionExternalPaymentStart: TransactionExternalPaymentStart
   transactionExternalPaymentCancel: TransactionExternalPaymentCancel
   transactionExternalPaymentFinalize: TransactionExternalPaymentFinalize
   transactions: Transactions
+}
+
+type Mutation {
+  transactionExternalPaymentStart(input: String!): TransactionExternalPaymentStart
 }

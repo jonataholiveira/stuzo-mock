@@ -15,10 +15,13 @@ const resolvers = {
   Query: {
     oAuthApplicationAuthenticate: () => oAuthApplicationAuthenticate.data.oAuthApplicationAuthenticate,
     locations: () => locations.data.locations,
-    transactionExternalPaymentStart: () => transactionExternalPaymentStart.data.transactionExternalPaymentStart,
     transactionExternalPaymentCancel: () => transactionExternalPaymentCancel.data.transactionExternalPaymentCancel,
     transactionExternalPaymentFinalize: () => transactionExternalPaymentFinalize.data.transactionExternalPaymentFinalize,
     transactions: () => transactions.data.transactions
+  },
+
+  Mutation: {
+    transactionExternalPaymentStart: (input) => transactionExternalPaymentStart.data.transactionExternalPaymentStart
   }
 };
 
