@@ -125,7 +125,6 @@ type Transactions {
 }
 
 type Query {
-  oAuthApplicationAuthenticate: OAuthApplicationAuthenticate
   locations: Locations
   transactionExternalPaymentCancel: TransactionExternalPaymentCancel
   transactionExternalPaymentFinalize: TransactionExternalPaymentFinalize
@@ -134,4 +133,5 @@ type Query {
 
 type Mutation {
   transactionExternalPaymentStart(input: String!): TransactionExternalPaymentStart
+  oAuthApplicationAuthenticate(credentials: String!): OAuthApplicationAuthenticate
 }

@@ -13,7 +13,6 @@ const typeDefs = readFileSync('./typeDefs/typeDefs.graphql').toString('utf-8');
 
 const resolvers = {
   Query: {
-    oAuthApplicationAuthenticate: () => oAuthApplicationAuthenticate.data.oAuthApplicationAuthenticate,
     locations: () => locations.data.locations,
     transactionExternalPaymentCancel: () => transactionExternalPaymentCancel.data.transactionExternalPaymentCancel,
     transactionExternalPaymentFinalize: () => transactionExternalPaymentFinalize.data.transactionExternalPaymentFinalize,
@@ -21,7 +20,8 @@ const resolvers = {
   },
 
   Mutation: {
-    transactionExternalPaymentStart: (input) => transactionExternalPaymentStart.data.transactionExternalPaymentStart
+    transactionExternalPaymentStart: (input) => transactionExternalPaymentStart.data.transactionExternalPaymentStart,
+    oAuthApplicationAuthenticate: (credentials) => oAuthApplicationAuthenticate.data.oAuthApplicationAuthenticate
   }
 };
 
