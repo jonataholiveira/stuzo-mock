@@ -131,4 +131,5 @@ type Query {
   transactionExternalPaymentCancel: TransactionExternalPaymentCancel
   transactionExternalPaymentFinalize: TransactionExternalPaymentFinalize
   transactions: Transactions
+  paymentStart(uuid: String!): TransactionExternalPaymentStart
 }

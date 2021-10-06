@@ -18,7 +18,8 @@ const resolvers = {
     transactionExternalPaymentStart: () => transactionExternalPaymentStart.data.transactionExternalPaymentStart,
     transactionExternalPaymentCancel: () => transactionExternalPaymentCancel.data.transactionExternalPaymentCancel,
     transactionExternalPaymentFinalize: () => transactionExternalPaymentFinalize.data.transactionExternalPaymentFinalize,
-    transactions: () => transactions.data.transactions
+    transactions: () => transactions.data.transactions,
+    paymentStart: (uuid) => transactionExternalPaymentStart.data.transactionExternalPaymentStart
   }
 };
 
