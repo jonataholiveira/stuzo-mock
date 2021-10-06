@@ -126,12 +126,12 @@ type Transactions {
 
 type Query {
   locations: Locations
-  transactionExternalPaymentCancel: TransactionExternalPaymentCancel
-  transactionExternalPaymentFinalize: TransactionExternalPaymentFinalize
-  transactions: Transactions
+  transactionLookup(filter: String!): Transactions
 }
 
 type Mutation {
   transactionExternalPaymentStart(input: String!): TransactionExternalPaymentStart
   oAuthApplicationAuthenticate(credentials: String!): OAuthApplicationAuthenticate
+  transactionExternalPaymentCancel(uuid: ID!): TransactionExternalPaymentCancel
+  transactionExternalPaymentFinalize(uuid: ID!): TransactionExternalPaymentFinalize
 }

@@ -6,7 +6,7 @@ const locations = require('./responses/locations.json')
 const transactionExternalPaymentStart = require('./responses/startTransaction.json')
 const transactionExternalPaymentCancel = require('./responses/cancelTransaction.json')
 const transactionExternalPaymentFinalize = require('./responses/finalizeTransaction.json')
-const transactions = require('./responses/statusTransaction.json')
+const transaction = require('./responses/statusTransaction.json')
 
 
 const typeDefs = readFileSync('./typeDefs/typeDefs.graphql').toString('utf-8');
@@ -14,14 +14,14 @@ const typeDefs = readFileSync('./typeDefs/typeDefs.graphql').toString('utf-8');
 const resolvers = {
   Query: {
     locations: () => locations.data.locations,
-    transactionExternalPaymentCancel: () => transactionExternalPaymentCancel.data.transactionExternalPaymentCancel,
-    transactionExternalPaymentFinalize: () => transactionExternalPaymentFinalize.data.transactionExternalPaymentFinalize,
-    transactions: () => transactions.data.transactions
+    transactionLookup: (filter) => transaction.data.transactions
   },
 
-  Mutation: {
+  Mutation: {    
+    oAuthApplicationAuthenticate: (credentials) => oAuthApplicationAuthenticate.data.oAuthApplicationAuthenticate,
     transactionExternalPaymentStart: (input) => transactionExternalPaymentStart.data.transactionExternalPaymentStart,
-    oAuthApplicationAuthenticate: (credentials) => oAuthApplicationAuthenticate.data.oAuthApplicationAuthenticate
+    transactionExternalPaymentCancel: (uuid) => transactionExternalPaymentCancel.data.transactionExternalPaymentCancel,
+    transactionExternalPaymentFinalize: (uuid) => transactionExternalPaymentFinalize.data.transactionExternalPaymentFinalize
   }
 };
 
