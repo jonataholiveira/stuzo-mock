@@ -130,8 +130,8 @@ type Query {
 }
 
 type Mutation {
-  transactionExternalPaymentStart(input: String!): TransactionExternalPaymentStart
   oAuthApplicationAuthenticate(credentials: String!): OAuthApplicationAuthenticate
+  transactionExternalPaymentStart(input: String!): TransactionExternalPaymentStart
   transactionExternalPaymentCancel(uuid: ID!): TransactionExternalPaymentCancel
   transactionExternalPaymentFinalize(uuid: ID!): TransactionExternalPaymentFinalize
 }
