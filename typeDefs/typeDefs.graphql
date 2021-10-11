@@ -66,6 +66,10 @@ type Locations {
   pageInfo: PageInfo
 }
 
+type Test {
+  uuid: String
+}
+
 type TransactionExternalPaymentStart {
   uuid: String
   umti: String
@@ -126,6 +130,7 @@ type Transactions {
 
 type Query {
   locations: Locations
+  test: Test
   transactionLookup(filter: String!): Transactions
 }
 

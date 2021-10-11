@@ -1,0 +1,7 @@
+{
+    "fuelOrchestratorHostConfiguration": {
+        "protocol": "http",
+        "hostAddress": "localhost",
+        "port": 8080
+    }
+}
