@@ -8,18 +8,32 @@ class FuelOrchClient {
 
   }
 
-  executeFuelOrchTransactionLookup() {
+  executeFuelOrchTransactionExternalPaymentStartCallback() {
     
     var that = this;
 
     setTimeout(function(){
       that.transactionLookupPostRequest('RESERVING_PUMP');
-    }, 5 * 1000);
+    }, 10 * 1000);
 
     setTimeout(function(){
       that.transactionLookupPostRequest('PUMP_RESERVED');
-    }, 10 * 1000);
+    }, 15 * 1000);
+
+    setTimeout(function(){
+      that.transactionLookupPostRequest('FUELING_COMPLETED');
+    }, 20 * 1000);
   }
+
+  executeTransactionExternalPaymentFinalizeCallback() {
+
+    var that = this;
+    setTimeout(function(){
+      that.transactionLookupPostRequest('RECEIPT_READY');
+    }, 10 * 1000);
+
+  }
+  
 
   transactionLookupPostRequest(transactionState)  {
 
@@ -28,7 +42,7 @@ class FuelOrchClient {
     var webhookUrl = this.resolveFuelOrchestratorWebHookURL(transactionState);
     console.log('Webhook address is being called: ['+ webhookUrl +']');
 
-    axios.get('http://localhost:8082/hello')
+    axios.post(webhookUrl)
     .then(e => {
         console.log('Callback sent.');
     })
@@ -44,6 +58,7 @@ class FuelOrchClient {
     var url = appConfig.fuelOrchestratorHostConfiguration.protocol + "://" 
         + appConfig.fuelOrchestratorHostConfiguration.hostAddress + ":"
         + appConfig.fuelOrchestratorHostConfiguration.port + "/"
+        + appConfig.fuelOrchestratorHostConfiguration.baseParh + "/"
         + startTransactionData.data.transactionExternalPaymentStart.uuid + "/"
         + transactionState
     

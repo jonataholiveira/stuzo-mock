@@ -4,7 +4,7 @@ const { readFileSync } = require('fs');
 const httpProxy = require('http-proxy');
 const bodyParser = require('body-parser');
 const FuelOrchClient = require('./fuelOrchClient');
-const StuzoProxy = require('./stuzoProxy') 
+const StuzoProxy = require('./stuzoProxy');
 
 const oAuthApplicationAuthenticate = require("./responses/oAuthApplicationAuthenticate.json")
 const locations = require('./responses/locations.json')
@@ -44,13 +44,17 @@ let stuzoProxy = new StuzoProxy();
 let fuelOrchClient = new FuelOrchClient();
 
 app.all("/graphql",  function(req, res) {
-
   stuzoProxy.proxyAddress(req, res);
   
-  bodyAsString = JSON.stringify(req.body);  
+  bodyAsString = JSON.stringify(req.body);
+    
   if(bodyAsString.includes('transactionExternalPaymentStart')) {
-    fuelOrchClient.executeFuelOrchTransactionLookup();
+    fuelOrchClient.executeFuelOrchTransactionExternalPaymentStartCallback();
   }
+  else if(bodyAsString.includes('transactionExternalPaymentFinalize')) {
+    fuelOrchClient.executeTransactionExternalPaymentFinalizeCallback();
+  }
+
 });
 
 server.applyMiddleware({app});
