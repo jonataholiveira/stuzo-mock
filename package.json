@@ -29,6 +29,7 @@
     "http-proxy-middleware": "^2.0.1",
     "node-fetch": "^3.0.0",
     "nodemon": "^1.19.4",
+    "prettyjson": "^1.2.1",
     "request": "^2.88.2"
   }
 }

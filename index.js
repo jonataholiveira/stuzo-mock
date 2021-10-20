@@ -5,6 +5,8 @@ const httpProxy = require('http-proxy');
 const bodyParser = require('body-parser');
 const FuelOrchClient = require('./fuelOrchClient');
 const StuzoProxy = require('./stuzoProxy');
+const prettyjson = require('prettyjson');
+
 
 const oAuthApplicationAuthenticate = require("./responses/oAuthApplicationAuthenticate.json")
 const locations = require('./responses/locations.json')
@@ -44,9 +46,15 @@ let stuzoProxy = new StuzoProxy();
 let fuelOrchClient = new FuelOrchClient();
 
 app.all("/graphql",  function(req, res) {
+
   stuzoProxy.proxyAddress(req, res);
-  
   bodyAsString = JSON.stringify(req.body);
+  //console.log("<".repeat(80))
+  //console.log('GraphQL request has being received.')
+  console.log("<")
+  
+  //console.table(bodyAsString)
+  //console.log(prettyjson.render(bodyAsString));
     
   if(bodyAsString.includes('transactionExternalPaymentStart')) {
     fuelOrchClient.executeFuelOrchTransactionExternalPaymentStartCallback();
