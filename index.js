@@ -49,13 +49,7 @@ app.all("/graphql",  function(req, res) {
 
   stuzoProxy.proxyAddress(req, res);
   bodyAsString = JSON.stringify(req.body);
-  //console.log("<".repeat(80))
-  //console.log('GraphQL request has being received.')
-  console.log("<")
-  
-  //console.table(bodyAsString)
-  //console.log(prettyjson.render(bodyAsString));
-    
+  console.log(">")
   if(bodyAsString.includes('transactionExternalPaymentStart')) {
     fuelOrchClient.executeFuelOrchTransactionExternalPaymentStartCallback();
   }

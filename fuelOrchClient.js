@@ -37,7 +37,7 @@ class FuelOrchClient {
 
   transactionLookupPostRequest(transactionState)  {
 
-    console.log(">")
+    console.log("<")
     console.log('Sending webhook post request with transaction state: ['+ transactionState +']');
 
     var webhookUrl = this.resolveFuelOrchestratorWebHookURL(transactionState);
@@ -46,7 +46,6 @@ class FuelOrchClient {
     axios.post(webhookUrl)
     .then(e => {
         console.log('Callback/Webhook to Fuel Orch. was just sent.');
-        console.log(">")
     })
     .catch(error => {
       console.log(error);
